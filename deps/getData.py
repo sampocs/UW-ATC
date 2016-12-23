@@ -91,7 +91,7 @@ def getCurrentTime ():
 	#Get Unix Time
 	timestamp = int(time.time())
 	#Fix TimeZone Issue
-	timestamp = timestamp + 21600 -3000000
+	timestamp = timestamp + 21600
 	#Change format
 	t = dt.datetime.fromtimestamp(timestamp)
 	t = rfc3339(t)
