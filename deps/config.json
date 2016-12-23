@@ -1,0 +1,79 @@
+{
+	"Security": {
+		"Stocks": {
+			"dataParams": {
+				"ticker":"DUST",
+				"period":"60",
+				"days":"7",
+				"daysBack": 50
+			}
+		},
+		"Forex": {
+			"oanda": {
+				"id":"5554398",
+				"environment": "practice",
+        		"token":"93e70bc4fa445648cbb2795ebf6d1a70-c5bc1eb094b3d141b81ac5987d970dae",
+        		"tradingUnits": 10000
+			},
+			"dataParams":{
+       			"count":"5000",
+       			"granularity":"M10",
+        		"instrument":"USD_JPY",
+        		"candleFormat": "midpoint",
+        		"stopLoss":0.5,
+        		"takeProfit":0.4,
+        		"daysBack": 3
+    		}
+		},
+		"CurrentSecurity": "Forex"
+	},
+	"ADX": {
+		"A": 14,
+		"strongTrend": 22
+	},
+	"MACD": {
+		"A": 12,
+		"B": 26,
+		"C": 9,
+		"LaggingForex": "H4",
+		"LaggingStock": "14400"
+	},
+	"ichimoku": {
+		"A": 9,
+		"B": 26,
+		"C": 52
+	},
+	"RSI": {
+		"span": 14,
+		"upper": 72,
+		"lower": 28
+	}, 
+	"Policies": {
+		"MACD": false,
+		"DualMACD": false,
+		"IchimokuCloud": false,
+		"IchimokuConversionLine": true,
+		"RSI": false,
+		"ADX": false
+	}, 
+	"Actions": {
+		"SendText": true,
+		"SendEmail": true,
+		"ExecuteTrade": true
+	},
+	"Twilio": {
+		"sid":"ACfd4e10534f079d227f9455a16ef163fe",
+        "token":"1ee38150b2e1168fa00a73b0d06c68bd",
+        "to": "17086745707",
+        "from": "17085726824"
+	},
+	"Email": {
+		"to": "pocsspam@gmail.com",
+		"from": "pocsspam@gmail.com",
+		"password": "fuzzer13"
+	},
+	"DecisionThreshold": {
+		"Buy": 0.3,
+		"Sell": -0.3
+	}
+}
