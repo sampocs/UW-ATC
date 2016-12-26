@@ -16,5 +16,5 @@ processD(data)
 decision = processP()
 
 #actions
-action(1)
+action(decision)
 
