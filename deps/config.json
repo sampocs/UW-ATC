@@ -16,13 +16,13 @@
         		"tradingUnits": 10000
 			},
 			"dataParams":{
-       			"count":"5000",
+       			"count":"200",
        			"granularity":"M10",
         		"instrument":"USD_JPY",
         		"candleFormat": "midpoint",
         		"stopLoss":0.5,
         		"takeProfit":0.4,
-        		"daysBack": 3
+        		"daysBack": 20
     		}
 		},
 		"CurrentSecurity": "Forex"
@@ -58,19 +58,19 @@
 	}, 
 	"Actions": {
 		"SendText": true,
-		"SendEmail": true,
-		"ExecuteTrade": false
+		"SendEmail": false,
+		"ExecuteTrade": true
 	},
 	"Twilio": {
 		"sid":"ACfd4e10534f079d227f9455a16ef163fe",
         "token":"1ee38150b2e1168fa00a73b0d06c68bd",
-        "to": "12242408048",
+        "to": "17086745707",
         "from": "17085726824"
 	},
 	"Email": {
 		"to": "pocsspam@gmail.com",
 		"from": "pocsspam@gmail.com",
-		"password": "fuzzer13"
+		"password": "pocsspam13"
 	},
 	"DecisionThreshold": {
 		"Buy": 0.3,
