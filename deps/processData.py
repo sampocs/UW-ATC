@@ -28,10 +28,10 @@ def processD (data):
 	laggingRan = False
 	adxRan = False
 
-	for i in range (len(data)-daysBack, len(data)):
+	for i in range (len(data) - daysBack, len(data)):
 
 		#relevant data
-		relData = data[:len(data)-(daysBack-index-1)]
+		relData = data[:len(data) - (daysBack - index - 1)]
 
 		#price
 		proData["Price"].append(data[i])

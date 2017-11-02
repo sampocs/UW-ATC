@@ -1,9 +1,9 @@
 {
     "ADX":0,
     "DualMACD":0,
-    "IchimokuCloud":1,
-    "IchimokuConversionLine":1,
+    "IchimokuCloud":0,
+    "IchimokuConversionLine":0,
     "MACD":0,
     "RSI":0,
-    "finalDecision":1.0
+    "finalDecision":0.0
 }

@@ -10,11 +10,11 @@ def dualMACdecision ():
 	#Gather information
 	#Short term
 	macd = proData["MACD"] 
-	currentState = macd[len(macd)- 1]["state"]
-	pastState = macd[len(macd) - 2]["state"]
+	currentState = macd[-1]["state"]
+	pastState = macd[-2]["state"]
 	#Long term
 	laggingMACD = proData["LaggingMACD"]
-	laggingState = laggingMACD[len(laggingMACD) - 1]["state"]
+	laggingState = laggingMACD[-1]["state"]
 	move = 0
 
 	#If was falling, now rising; buy, 1
@@ -30,3 +30,4 @@ def dualMACdecision ():
 		move = 0
 
 	return move
+	

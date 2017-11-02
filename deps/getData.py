@@ -38,9 +38,7 @@ def getStockPrices (granularity):
 
 	prices = requests.get(url)
 	reader = csv.reader(prices.text.splitlines())
-	times = []
-	data = []
-	lastStamp = 0
+	times, data, lastStamp = [], [], []
 
 	#Grab prices and times from csv
 	for line in reader:
@@ -105,7 +103,7 @@ def getCurrentTime ():
 	sec = t[17:19]
 
 	#Format for oanda
-	currTime = day + "T" + hour + "%3A" + minute + "%3A" + sec
+	currTime = "{}T{}%3A{}%3A{}".format(day, hour, minute, sec)
 
 	return currTime
 

@@ -24,3 +24,4 @@ def action (dec):
 				if (action != "ExecuteTrade"):	
 					function = getattr(alerts, action)
 					function(decision, tradeConfirmation)
+					

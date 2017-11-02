@@ -10,8 +10,8 @@ def rsiDecision ():
 	
 	#Gather information
 	rsi = proData["RSI"]
-	currentRSI = rsi[len(rsi) - 1]
-	pastRSI = rsi[len(rsi) - 2]
+	currentRSI = rsi[-1]
+	pastRSI = rsi[-2]
 	upper = config["RSI"]["upper"]
 	lower = config["RSI"]["lower"]
 	move = 0
@@ -27,3 +27,4 @@ def rsiDecision ():
 		move = 0
 
 	return move
+

@@ -25,8 +25,7 @@ def macd2 ():
 		data = getForexPrices(granularity)
 
 	#Use talib to find the lagging MACD values
-	data = [float(x) for x in data]
-	data = numpy.array(data)
+	data = numpy.array([float(x) for x in data])
 	MACD = talib.MACD(data, macdParams["A"], macdParams["B"], macdParams["C"])
 	macLineArray = MACD[0]
 	sigLineArray = MACD[1]

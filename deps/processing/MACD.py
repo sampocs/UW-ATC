@@ -9,8 +9,7 @@ def macd (data):
 	macdParams = config["MACD"]
 
 	#Get MACD from talib
-	data = [float(x) for x in data]
-	data = numpy.array(data)
+	data = numpy.array([float(x) for x in data])
 	MACD = talib.MACD(data, macdParams["A"], macdParams["B"], macdParams["C"])
 
 	#Get most recent value

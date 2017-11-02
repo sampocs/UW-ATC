@@ -9,8 +9,7 @@ def rsiProcess (data):
 	span = config["RSI"]["span"]
 
 	#Get rsi with talib
-	data = [float(x) for x in data]
-	data = numpy.array(data)
+	data = numpy.array([float(x) for x in data])
 	rsi = talib.RSI(data, timeperiod=span)
 	rsiVal = rsi[len(rsi)-1]
 	

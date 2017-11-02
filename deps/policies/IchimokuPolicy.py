@@ -11,24 +11,24 @@ def defineVariables():
 	length = len(ichimoku)
 
 	#SpanA line
-	currSpanA = ichimoku[length-1]["spanA"]
-	pastSpanA = ichimoku[length-2]["spanA"]
+	currSpanA = ichimoku[-1]["spanA"]
+	pastSpanA = ichimoku[-2]["spanA"]
 
 	#SpanB line
-	currSpanB = ichimoku[length-1]["spanB"]
-	pastSpanB = ichimoku[length-2]["spanB"]
+	currSpanB = ichimoku[-1]["spanB"]
+	pastSpanB = ichimoku[-2]["spanB"]
 
 	#Cloud color
-	currCloud = ichimoku[length-1]["cloudColor"]
-	pastCloud = ichimoku[length-2]["cloudColor"]
+	currCloud = ichimoku[-1]["cloudColor"]
+	pastCloud = ichimoku[-2]["cloudColor"]
 
 	#Conversion line
-	currConversion = ichimoku[length-1]["conversionLine"]
-	pastConversion = ichimoku[length-2]["conversionLine"]
+	currConversion = ichimoku[-1]["conversionLine"]
+	pastConversion = ichimoku[-2]["conversionLine"]
 
 	##Price
-	currPrice = proData["Price"][length-1]
-	pastPrice = proData["Price"][length-2]
+	currPrice = proData["Price"][-1]
+	pastPrice = proData["Price"][-2]
 
 	return ichimoku, length, currSpanA, pastSpanA, currSpanB, pastSpanB, currCloud, pastCloud, currConversion, pastConversion, currPrice, pastPrice
 
@@ -72,3 +72,4 @@ def ichiConverDecision ():
 		move = 0
 
 	return move
+	

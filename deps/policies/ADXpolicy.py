@@ -11,12 +11,11 @@ def adxDecision ():
 	adx = proData["ADX"]
 
 	#Grab import information
-	length = len (adx)
-	currADX = adx[length - 1]["ADX"]
-	currPlusDI = adx[length -1]["+DI"]
-	pastPlusDI = adx[length - 2]["-DI"]
-	currMinusDI = adx[length - 1]["+DI"]
-	pastMinusDI = adx[length - 2]["-DI"]
+	currADX = adx[-1]["ADX"]
+	currPlusDI = adx[-1]["+DI"]
+	pastPlusDI = adx[-2]["-DI"]
+	currMinusDI = adx[-1]["+DI"]
+	pastMinusDI = adx[-2]["-DI"]
 
 	#If ADX is above the given threshold, the trend is considered strong
 	if (currADX > config["ADX"]["strongTrend"]):
@@ -36,3 +35,4 @@ def adxDecision ():
 		move = 0
 
 	return move
+	

@@ -98,7 +98,7 @@ def executeForexTrade(config, decision):
 			oanda.create_order(ACCT_ID, instrument=dataParams["instrument"], units=units, side="buy", type="market", stopLoss=stopLoss, takeProfit=takeProfit)
 			
 			#Return Confirmation Message
-			return "Bought " + units + " units of " + dataParams["instrument"] + " at " + str(price)
+			return "Bought {} units of {} at {}".format(units, dataParams["instrument"], price)
 
 
 		#If decision is to sell, and there are no open positions
@@ -116,7 +116,7 @@ def executeForexTrade(config, decision):
 			oanda.create_order(ACCT_ID, instrument=dataParams["instrument"], units=units, side="sell", type="market", stopLoss=stopLoss, takeProfit=takeProfit)
 
 			#Return Confirmation Message
-			return "Sold " + units + " units of " + dataParams["instrument"] + " at " + str(price)
+			return "Sold {} units of {} at {}".format(units, dataParams["instrument"], price)
 
 
 		#Otherwise hold

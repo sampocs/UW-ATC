@@ -10,7 +10,7 @@
 		},
 		"Forex": {
 			"oanda": {
-				"id":"XXXXXX",
+				"id":"XXXXX",
 				"environment": "practice",
         			"token":"XXXX",
         			"tradingUnits": 10000

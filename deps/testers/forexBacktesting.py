@@ -115,7 +115,7 @@ for current in range(80, len(data)):
 				continue
 
 		#Final value, close everything out
-		if (current == len(data)-1):
+		if (current == len(data) - 1):
 			if (hasOpenTrades):
 				closedEarly =True
 				if (position =="long"):
@@ -141,8 +141,8 @@ for i in range(0,len(policies)):
 #Compile return message 
 totalProfit = sum(profit)
 percentReturn = 100 * float(totalProfit / units)
-resultsMessage = str(numTradesMade) + " trades were executed." + "\n" + "Total Profit = $" + str(totalProfit) +"\n" + \
-	str(units) + " units were traded at a time." + "\n" + "Total Return = " + str(percentReturn) + "%"
+resultsMessage = "{} trades were executed.\nTotal Profit = ${}\n{} units were traded at a time.\nTotal Return = {}%". \
+					format(numTradesMade, totalProfit, units, percentReturn)
 
 #Print results
 print "Indicators used were: " + policyList

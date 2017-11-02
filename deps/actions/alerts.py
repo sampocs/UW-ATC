@@ -45,26 +45,27 @@ def decisionMessage (decision):
 
 	#Find the current price
 	priceArray = proData["Price"]
-	price = str(priceArray[len(priceArray)-1])
+	price = priceArray[-1]
 
 	#Stocks
 	if (securityType == "Stocks"):
 		ticker = config["Security"][securityType]["dataParams"]["ticker"]
 		#Buy	
 		if (decision == 1):
-			return "Buy " + ticker + ". Current Price is: $" + price + " per share."
+			return "Buy {}. Current price is: ${} per share.".format(ticker, price)
 		#Sell
 		elif (decision == -1):
-			return "Sell shares of " + ticker + ". Current price is $" + price + " per share."
+			return "Sell shares of {}. Current price is ${} per share.".format(ticker, price)
+
 	#Forex
 	else:
 		instrument = config["Security"][securityType]["dataParams"]["instrument"]
 		#Buy
 		if (decision == 1):
-			return "Buy " + instrument + ". Current price is " + price + "."
+			return "Buy {}. Current price is {}.".format(instrument, price)
 		#Sell
 		elif (decision == -1):
-			return "Short " + instrument + ". Current price is " + price + "."
+			return "Short {}. Current price is {}.".format(instrument, price)
 			
 	return ""
 

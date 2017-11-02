@@ -20,12 +20,9 @@ def adxProcess ():
 		highAsk, lowAsk, closeAsk = getForexHighLow ()
 
 	#Format for talib
-	highAsk = [float(x) for x in highAsk]
-	lowAsk = [float(x) for x in lowAsk]
-	closeAsk = [float(x) for x in closeAsk]
-	highAsk = numpy.array(highAsk)
-	lowAsk = numpy.array(lowAsk)
-	closeAsk = numpy.array(closeAsk)
+	highAsk = numpy.array([float(x) for x in highAsk])
+	lowAsk = numpy.array([float(x) for x in lowAsk])
+	closeAsk = numpy.array([float(x) for x in closeAsk])
 	
 	#Get ADX from talib
 	ADX = talib.ADX(highAsk, lowAsk, closeAsk, adxParams["A"])
@@ -43,4 +40,3 @@ def adxProcess ():
 		adx.append(adxPart)
 
 	return adx
-

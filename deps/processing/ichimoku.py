@@ -11,16 +11,9 @@ def ichimokuProcess (data):
 	c = ichiParams["C"]
 
 	#PRESENT CONVERSION AND BASE, FUTURE CLOUD
-	dayA = []
-	dayB = []
-	dayC = []
-
-	for i in range (len(data) - a, len(data)):
-		dayA.append(data[i])
-	for i in range (len(data) - b, len(data)):
-		dayB.append(data[i])
-	for i in range (len(data) - c, len(data)):
-		dayC.append(data[i])
+	dayA = [data[i] for i in range (len(data) - a, len(data))]
+	dayB = [data[i] for i in range (len(data) - b, len(data))]
+	dayC = [data[i] for i in range (len(data) - c, len(data))]
 
 	#A days high and low
 	highA = max(dayA)
@@ -41,16 +34,9 @@ def ichimokuProcess (data):
 	spanBFut = (highC + lowC)/2.0
 
 	#PAST CONVERSION AND BASE, PRESENT CLOUD
-	dayAPast = []
-	dayBPast = []
-	dayCPast = []
-
-	for i in range (len(data) - a-b, len(data) - b):
-		dayAPast.append(data[i])
-	for i in range (len(data) - b-b, len(data) - b):
-		dayBPast.append(data[i])
-	for i in range (len(data) - c-b, len(data) - b):
-		dayCPast.append(data[i])
+	dayAPast = [data[i] for i in range (len(data) - a-b, len(data) - b)]
+	dayBPast = [data[i] for i in range (len(data) - b-b, len(data) - b)]
+	dayCPast = [data[i] for i in range (len(data) - c-b, len(data) - b)]
 
 	#A days high and low
 	highAPast = max(dayAPast)
