@@ -12,3 +12,11 @@ In the Config File:
     * If you want to recieve a text, insert your Twilio account information under "Twilio".
     * If you want to recieve an email, enter your email address and password under "Email".
     * If you want to automatically execute a trade in the foreign exchange market, enter your Oanda account information and the number of units you would like to trade.
+
+## Dependencies
+* OandaPy
+* TA-Lib
+* Twilio
+* Numpy
+* Requests 
+* rfc3339 
