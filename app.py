@@ -6,15 +6,15 @@ from processData import processD
 from processPolicies import processP
 from executeAction import action
 
-#get data
+#Get data
 data = getPrices()
 
-#process data
+#Process data 
 processD(data)
 
-#policies
+#Apply policies
 decision = processP()
 
-#actions
+#Actions
 action(decision)
 
