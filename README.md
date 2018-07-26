@@ -19,4 +19,3 @@ In the Config File:
 * Twilio
 * Numpy
 * Requests 
-* rfc3339 
