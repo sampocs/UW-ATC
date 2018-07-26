@@ -5,7 +5,6 @@ import requests, csv, re, json
 
 import time
 import datetime as dt
-from rfc3339 import rfc3339
 
 #load config
 config = load_json("config.json")
@@ -86,24 +85,9 @@ def getForexPrices(granularity):
 
 #Time Formatting
 def getCurrentTime ():
-	#Get Unix Time
-	timestamp = int(time.time())
-	#Fix TimeZone Issue
-	timestamp = timestamp + 21600
-	#Change format
-	t = dt.datetime.fromtimestamp(timestamp)
-	t = rfc3339(t)
-	t = str(t)
-	t = t[:-6]
-
-	#Evaluate
-	day = t[0:10]
-	hour = t[11:13]
-	minute = t[14:16]
-	sec = t[17:19]
-
 	#Format for oanda
-	currTime = "{}T{}%3A{}%3A{}".format(day, hour, minute, sec)
+	t = dt.datetime.utcnow()
+	currTime = t.isoformat().replace(':', '%3A')
 
 	return currTime
 
