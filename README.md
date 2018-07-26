@@ -1,6 +1,7 @@
 # UW-ATC
 Pipeline for using technical analysis to make automated trades in the stock or foreign exchange market.
-##Usage
+
+## Usage
 In the Config File:
   * Change the "CurrentSecurity" to either Stocks or Forex.
   * Enter in the desired data parameters (Instrument/Ticker, Period/Granularity, Stop Loss/Take Profit)
